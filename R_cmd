@@ -1,0 +1,34 @@
+getwd() # print the current working directory - cwd 
+ls()    # list the objects in the current workspace
+
+setwd(mydirectory)      # change to mydirectory
+setwd("c:/docs/mydir")  # note / instead of \ in windows 
+setwd("/usr/rob/mydir") # on linux
+
+# view and set options for the session
+help(options) # learn about available options
+options() # view current option settings
+options(digits=3) # number of digits to print on output
+
+# work with your previous commands
+history() # display last 25 commands
+history(max.show=Inf) # display all previous commands
+
+# save your command history 
+savehistory(file="myfile") # default is ".Rhistory" 
+
+# recall your command history 
+loadhistory(file="myfile") # default is ".Rhistory"
+
+# save the workspace to the file .RData in the cwd 
+save.image()
+
+# save specific objects to a file
+# if you don't specify the path, the cwd is assumed 
+save(object list,file="myfile.RData")
+
+# load a workspace into the current session
+# if you don't specify the path, the cwd is assumed 
+load("myfile.RData")
+
+q() # quit R. You will be prompted to save the workspace.
